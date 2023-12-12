@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: maramiev <maramiev@student.42.fr>          +#+  +:+       +#+         #
+#    By: maramiev <maramiev@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/30 12:01:05 by maramiev          #+#    #+#              #
-#    Updated: 2023/12/12 11:42:15 by maramiev         ###   ########.fr        #
+#    Updated: 2023/12/12 14:52:16 by maramiev         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 

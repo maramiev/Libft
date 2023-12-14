@@ -6,7 +6,7 @@
 /*   By: maramiev <maramiev@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/30 11:32:16 by maramiev          #+#    #+#             */
-/*   Updated: 2023/12/12 14:52:19 by maramiev         ###   ########.fr       */
+/*   Updated: 2023/12/14 13:16:34 by maramiev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,6 @@ void	*ft_memset(void *dest, int c, size_t len);
 void	ft_bzero(void *s, size_t n);
 void	*ft_memcpy(void *dst, const void *src, size_t n);
 void	*ft_memmove(void *dst, const void *src, size_t len);
+size_t	ft_strlcpy(char *dst, const char *src, size_t dsize);
 
 #endif

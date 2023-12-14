@@ -6,7 +6,7 @@
 #    By: maramiev <maramiev@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/30 12:01:05 by maramiev          #+#    #+#              #
-#    Updated: 2023/12/12 14:52:16 by maramiev         ###   ########.fr        #
+#    Updated: 2023/12/14 13:16:37 by maramiev         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ CFLAGS = -Wall -Wextra -Werror
 CC = gcc
 CLEAN = rm -Rf
 SRC = ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c ft_memcpy.c \
-ft_memset.c ft_strlen.c ft_memmove.c
+ft_memset.c ft_strlen.c ft_memmove.c ft_strlcpy
 OBJS = $(SRC:.c=.o)
 all: $(NAME)
 $(NAME):$(OBJS)

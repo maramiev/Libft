@@ -6,7 +6,7 @@
 /*   By: maramiev <maramiev@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/12 12:43:04 by maramiev          #+#    #+#             */
-/*   Updated: 2023/12/14 13:48:21 by maramiev         ###   ########.fr       */
+/*   Updated: 2023/12/14 13:56:27 by maramiev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dsize)
 	return (ft_strlen(src));
 	
 }
-/*
+/*	
 int main(void) 
 {
 	size_t dsize = 3;

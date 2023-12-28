@@ -1,34 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maramiev <maramiev@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/28 14:55:17 by maramiev          #+#    #+#             */
-/*   Updated: 2023/12/20 12:57:58 by maramiev         ###   ########.fr       */
+/*   Created: 2023/12/26 09:14:47 by maramiev          #+#    #+#             */
+/*   Updated: 2023/12/27 13:33:29 by maramiev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
-int	ft_strlen(const char *s)
+char	*ft_strrchr(const char *s, int c)
 {
-	int	i;
+	int	l;
 
-	i = 0;
-	while (s[i] != '\0')
+	l = ft_strlen(s);
+	while (l >= 0)
 	{
-		i++;
+		if (s[l] == (unsigned char)c)
+		{
+			return ((char *)&s[l]);
+		}
+		l--;
 	}
-	return (i);
+	return (NULL);
 }
 
-/*int	main(void)
-
+int	main(void)
 {
-	const char	*string = "Majo";
-	printf("El conteo con mi funcion es : %d\n", ft_strlen(string));
-	printf("El conteo con la f original: %lu\n", strlen(string));
-}*/
+	printf("con mi funcion,%s\n", ft_strrchr("majo y maca", 'a'));
+	printf("con la funcion original, %s\n", strrchr("majo y maca" , 'a'));
+}

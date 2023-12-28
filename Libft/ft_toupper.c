@@ -1,34 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maramiev <maramiev@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/28 14:55:17 by maramiev          #+#    #+#             */
-/*   Updated: 2023/12/20 12:57:58 by maramiev         ###   ########.fr       */
+/*   Created: 2023/12/20 12:57:15 by maramiev          #+#    #+#             */
+/*   Updated: 2023/12/26 09:04:27 by maramiev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
 
-int	ft_strlen(const char *s)
+int	ft_toupper(int c)
+
 {
-	int	i;
-
-	i = 0;
-	while (s[i] != '\0')
+	if (c >= 97 && c <= 122)
 	{
-		i++;
+		return (c - 32);
 	}
-	return (i);
+	return (c);
 }
-
-/*int	main(void)
-
+/*
+int main ()
 {
-	const char	*string = "Majo";
-	printf("El conteo con mi funcion es : %d\n", ft_strlen(string));
-	printf("El conteo con la f original: %lu\n", strlen(string));
+	char c1 = 'h';
+	char c2 = 'h';
+	printf("El resultado con mi codigo es %c\n", ft_toupper(c1));
+	printf("El resultado con la original es %c\n",toupper(c2));
 }*/

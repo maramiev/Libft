@@ -1,34 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maramiev <maramiev@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/28 14:55:17 by maramiev          #+#    #+#             */
-/*   Updated: 2023/12/20 12:57:58 by maramiev         ###   ########.fr       */
+/*   Created: 2023/12/26 12:55:02 by maramiev          #+#    #+#             */
+/*   Updated: 2023/12/26 12:58:57 by maramiev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
-int	ft_strlen(const char *s)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	int	i;
 
-	i = 0;
-	while (s[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
 }
-
-/*int	main(void)
-
+int main()
 {
-	const char	*string = "Majo";
-	printf("El conteo con mi funcion es : %d\n", ft_strlen(string));
-	printf("El conteo con la f original: %lu\n", strlen(string));
-}*/
+	return (0);
+}

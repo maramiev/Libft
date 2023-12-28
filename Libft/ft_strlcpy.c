@@ -6,7 +6,7 @@
 /*   By: maramiev <maramiev@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/12 12:43:04 by maramiev          #+#    #+#             */
-/*   Updated: 2023/12/14 13:56:27 by maramiev         ###   ########.fr       */
+/*   Updated: 2023/12/20 12:57:57 by maramiev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,21 +15,19 @@
 size_t	ft_strlcpy(char *dst, const char *src, size_t dsize)
 
 {
-// incializamos el indice 
-	size_t i = 0;
+	size_t	i;
+	i = 0;
 	if (dsize > 0)
 	{
 		//aqui copio caracteres de src a destino hasta size -1 
-		while ( i < dsize -1 && src [i] != '\0')
-	   	{
+		while (i < dsize -1 && src [i] != '\0')
+		{
 			dst[i] = src[i];
-			i++; 
+			i++;
 		}
 		dst[i] = '\0';
-
 	}
 	return (ft_strlen(src));
-	
 }
 /*	
 int main(void) 

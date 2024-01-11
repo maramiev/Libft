@@ -1,39 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maramiev <maramiev@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/26 12:55:02 by maramiev          #+#    #+#             */
-/*   Updated: 2024/01/08 11:22:38 by maramiev         ###   ########.fr       */
+/*   Created: 2023/12/28 12:45:43 by maramiev          #+#    #+#             */
+/*   Updated: 2024/01/09 14:10:48 by maramiev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n)
 
 {
-	unsigned int	i;
+	size_t			i;
+	unsigned char	*s1;
+	unsigned char	c2;
 
+	s1 = (unsigned char *) s;
+	c2 = (unsigned char) c;
 	i = 0;
-	while (((i < n) && s1[i] != '\0') && (s2[i] != '\0') && (s1[i] == s2[i]))
+	while (i < n)
 	{
+		if (s1[i] == c2)
+		{
+			return ((void *)&s1[i]);
+		}
 		i++;
 	}
-	if (i == n)
-	{
-		return (0);
-	}
-	else
-	{
-		return ((unsigned char)s1[i] - (unsigned char)s2[i]);
-	}
+	return (NULL);
 }
 /*
-int main()
+int	main(void)
 {
-	printf("Con mi funcion es %d\n",ft_strncmp("holha", "holis", 3));
-	printf("Con la original es %d\n", strncmp("hola", "holis", 3));
+	printf("con mi funcion,%s\n", ft_memchr("majo y maca", 'a', 5));
+	printf("con la funcion original,%s\n", memchr("majo y maca", 'a', 5));
+	return (0);
 }*/

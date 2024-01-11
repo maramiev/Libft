@@ -1,39 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maramiev <maramiev@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/26 12:55:02 by maramiev          #+#    #+#             */
-/*   Updated: 2024/01/08 11:22:38 by maramiev         ###   ########.fr       */
+/*   Created: 2024/01/02 10:11:30 by maramiev          #+#    #+#             */
+/*   Updated: 2024/01/08 11:45:34 by maramiev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
-
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	unsigned int	i;
+	unsigned char	*s_1;
+	unsigned char	*s_2;
+	size_t			i;
 
+	s_1 = (unsigned char *)s1;
+	s_2 = (unsigned char *)s2;
 	i = 0;
-	while (((i < n) && s1[i] != '\0') && (s2[i] != '\0') && (s1[i] == s2[i]))
+	while (i < n)
 	{
+		if (s_1[i] != s_2[i])
+		{
+			return (s_1[i] - s_2[i]);
+		}
 		i++;
 	}
-	if (i == n)
-	{
-		return (0);
-	}
-	else
-	{
-		return ((unsigned char)s1[i] - (unsigned char)s2[i]);
-	}
+	return (0);
 }
 /*
-int main()
+int	main(void)
+
 {
-	printf("Con mi funcion es %d\n",ft_strncmp("holha", "holis", 3));
-	printf("Con la original es %d\n", strncmp("hola", "holis", 3));
+	char *s1 = "majo y aca";
+	char *s2 = "majo y mica";
+
+	printf("con mi funcion,%d\n", ft_memcmp(s1, s2, 10));
+	printf("con la funcion original,%d\n", memcmp(s1, s2, 10));
+
+	return (0);
 }*/

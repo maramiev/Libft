@@ -1,39 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maramiev <maramiev@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/26 12:55:02 by maramiev          #+#    #+#             */
-/*   Updated: 2024/01/08 11:22:38 by maramiev         ###   ########.fr       */
+/*   Created: 2024/01/10 11:56:36 by maramiev          #+#    #+#             */
+/*   Updated: 2024/01/11 09:56:21 by maramiev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+void	*ft_calloc(size_t count, size_t size)
 
 {
-	unsigned int	i;
+	size_t			i;
+	unsigned char	*memory;
 
 	i = 0;
-	while (((i < n) && s1[i] != '\0') && (s2[i] != '\0') && (s1[i] == s2[i]))
+	memory = malloc (count * size);
+	if (memory == NULL)
 	{
+		return (NULL);
+	}
+	while (i < (count * size))
+	{
+		memory[i] = '\0';
 		i++;
 	}
-	if (i == n)
-	{
-		return (0);
-	}
-	else
-	{
-		return ((unsigned char)s1[i] - (unsigned char)s2[i]);
-	}
+	return (memory);
 }
 /*
-int main()
+int	main(void)
+
 {
-	printf("Con mi funcion es %d\n",ft_strncmp("holha", "holis", 3));
-	printf("Con la original es %d\n", strncmp("hola", "holis", 3));
+	size_t			count2;
+	size_t			sizet2;	
+
+	count2 = 5;
+	sizet2 = 4;
+	printf("Con mi funcion : %s\n", ft_calloc(count2, sizet2));
+	printf("Con la original: %s\n", calloc(count2, sizet2));
 }*/

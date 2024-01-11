@@ -6,7 +6,7 @@
 /*   By: maramiev <maramiev@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/26 09:14:47 by maramiev          #+#    #+#             */
-/*   Updated: 2023/12/27 13:33:29 by maramiev         ###   ########.fr       */
+/*   Updated: 2023/12/28 12:06:04 by maramiev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,9 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	return (NULL);
 }
-
+/*
 int	main(void)
 {
 	printf("con mi funcion,%s\n", ft_strrchr("majo y maca", 'a'));
 	printf("con la funcion original, %s\n", strrchr("majo y maca" , 'a'));
-}
+}*/

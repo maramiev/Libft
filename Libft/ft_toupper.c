@@ -6,10 +6,9 @@
 /*   By: maramiev <maramiev@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/20 12:57:15 by maramiev          #+#    #+#             */
-/*   Updated: 2023/12/26 09:04:27 by maramiev         ###   ########.fr       */
+/*   Updated: 2024/01/02 10:00:53 by maramiev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 int	ft_toupper(int c)
 

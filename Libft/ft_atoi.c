@@ -1,39 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maramiev <maramiev@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/26 12:55:02 by maramiev          #+#    #+#             */
-/*   Updated: 2024/01/08 11:22:38 by maramiev         ###   ########.fr       */
+/*   Created: 2024/01/04 11:22:15 by maramiev          #+#    #+#             */
+/*   Updated: 2024/01/09 14:10:46 by maramiev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
-
+int	ft_atoi(const char *str)
 {
-	unsigned int	i;
+	int	res;
+	int	np;
+	int	i;
 
+	res = 0;
 	i = 0;
-	while (((i < n) && s1[i] != '\0') && (s2[i] != '\0') && (s1[i] == s2[i]))
+	np = 1;
+	while (str[i] == 32 || (str[i] > 8 && str[i] < 14))
+		i++;
+	if (str[i] == '+' || str[i] == '-')
 	{
+		if (str[i] == '-')
+			np = -1;
 		i++;
 	}
-	if (i == n)
+	while (str[i] >= '0' && str[i] <= '9')
 	{
-		return (0);
+		res = res * 10 + (str[i] - '0');
+		i++;
 	}
-	else
-	{
-		return ((unsigned char)s1[i] - (unsigned char)s2[i]);
-	}
+	return (np * res);
 }
 /*
-int main()
+int main ()
 {
-	printf("Con mi funcion es %d\n",ft_strncmp("holha", "holis", 3));
-	printf("Con la original es %d\n", strncmp("hola", "holis", 3));
+	const char	str1[]= "123Hola";
+	
+	printf("con mi funcion %d\n", ft_atoi(str1));
+	printf("con la original %d\n", atoi(str1));
+	return (0);
 }*/

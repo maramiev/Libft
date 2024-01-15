@@ -6,7 +6,7 @@
 /*   By: maramiev <maramiev@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/04 11:22:15 by maramiev          #+#    #+#             */
-/*   Updated: 2024/01/09 14:10:46 by maramiev         ###   ########.fr       */
+/*   Updated: 2024/01/11 11:26:06 by maramiev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ int	ft_atoi(const char *str)
 /*
 int main ()
 {
-	const char	str1[]= "123Hola";
+	const char	str1[]= "-123Hola";
 	
 	printf("con mi funcion %d\n", ft_atoi(str1));
 	printf("con la original %d\n", atoi(str1));

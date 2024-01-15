@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maramiev <maramiev@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: maramiev <maramiev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 11:56:36 by maramiev          #+#    #+#             */
-/*   Updated: 2024/01/11 09:56:21 by maramiev         ###   ########.fr       */
+/*   Updated: 2024/01/15 10:14:44 by maramiev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,15 +31,16 @@ void	*ft_calloc(size_t count, size_t size)
 	}
 	return (memory);
 }
+
 /*
 int	main(void)
 
 {
 	size_t			count2;
 	size_t			sizet2;	
-
+	
 	count2 = 5;
 	sizet2 = 4;
-	printf("Con mi funcion : %s\n", ft_calloc(count2, sizet2));
-	printf("Con la original: %s\n", calloc(count2, sizet2));
+	printf("Con mi funcion : %p\n", ft_calloc(count2, sizet2));
+	printf("Con la original: %p\n", calloc(count2, sizet2));
 }*/

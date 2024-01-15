@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maramiev <maramiev@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: maramiev <maramiev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/28 12:45:43 by maramiev          #+#    #+#             */
-/*   Updated: 2024/01/09 14:10:48 by maramiev         ###   ########.fr       */
+/*   Updated: 2024/01/15 10:14:25 by maramiev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
+
 /*
 int	main(void)
 {

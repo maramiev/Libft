@@ -3,17 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maramiev <maramiev@student.42.fr>          +#+  +:+       +#+        */
+/*   By: maramiev <maramiev@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 11:56:36 by maramiev          #+#    #+#             */
-/*   Updated: 2024/01/15 10:14:44 by maramiev         ###   ########.fr       */
+/*   Updated: 2024/01/17 11:36:17 by maramiev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 void	*ft_calloc(size_t count, size_t size)
-
 {
 	size_t			i;
 	unsigned char	*memory;

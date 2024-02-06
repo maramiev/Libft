@@ -1,31 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maramiev <maramiev@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/28 11:00:37 by maramiev          #+#    #+#             */
-/*   Updated: 2024/01/31 13:39:39 by maramiev         ###   ########.fr       */
+/*   Created: 2024/01/31 11:00:31 by maramiev          #+#    #+#             */
+/*   Updated: 2024/01/31 13:46:32 by maramiev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isdigit(int c)
-
+void	ft_putnbr_fd(int n, int fd)
 {
-	if (c >= 48 && c <= 57)
+	long	num_ent;
+
+	num_ent = n;
+	if (num_ent < 0)
 	{
-		return (1);
+		ft_putchar_fd('-', fd);
+		num_ent = num_ent * -1;
 	}
-	return (0);
+	if (num_ent > 9)
+	{
+		ft_putnbr_fd(num_ent / 10, fd);
+		ft_putnbr_fd(num_ent % 10, fd);
+	}
+	else
+		ft_putchar_fd(num_ent + '0', fd);
 }
 /*
 int	main(void)
 {
-	printf("El resultado aplicando mi funcion es : %d\n", ft_isdigit('0'));
-	printf("El resultado aplicando un 2do ejemplo es : %d\n",ft_isdigit('a'));
-	printf("El resultado aplicando la funcion es : %d\n", isdigit('0'));
-	printf("El resultado aplicando la f. 2 do ej es: %d\n", isdigit('b'));
+	ft_putnbr_fd('2000', 1);
+	return (0);
 }*/

@@ -6,12 +6,11 @@
 /*   By: maramiev <maramiev@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 10:19:59 by maramiev          #+#    #+#             */
-/*   Updated: 2023/12/12 14:52:26 by maramiev         ###   ########.fr       */
+/*   Updated: 2024/01/31 13:46:41 by maramiev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 void	*ft_memset(void *dest, int c, size_t len)
 

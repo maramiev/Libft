@@ -6,7 +6,7 @@
 /*   By: maramiev <maramiev@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/02 11:35:51 by maramiev          #+#    #+#             */
-/*   Updated: 2024/01/10 10:37:40 by maramiev         ###   ########.fr       */
+/*   Updated: 2024/01/31 13:32:05 by maramiev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 /*
 int	main()
 {
-	printf("Con mi funcion es %s\n",ft_strnstr("mundo", "da", 10));
+	printf("Con mi funcion es %s\n",ft_strnstr("mundo", " ", 10));
 	printf("Con la original es %s\n", strnstr("mundo", "da", 10));
 	return (0);
 }*/

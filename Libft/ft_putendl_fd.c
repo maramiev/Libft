@@ -1,31 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maramiev <maramiev@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/28 11:00:37 by maramiev          #+#    #+#             */
-/*   Updated: 2024/01/31 13:39:39 by maramiev         ###   ########.fr       */
+/*   Created: 2024/01/30 13:40:10 by maramiev          #+#    #+#             */
+/*   Updated: 2024/01/31 13:31:59 by maramiev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isdigit(int c)
+void	ft_putendl_fd(char *s, int fd)
+{
+	int	i;
 
-{
-	if (c >= 48 && c <= 57)
+	i = 0;
+	while (s[i] && s[i] != '\n')
 	{
-		return (1);
+		write(fd, &s[i], 1);
+		i++;
 	}
-	return (0);
+	write(fd, "\n", 1);
 }
-/*
-int	main(void)
-{
-	printf("El resultado aplicando mi funcion es : %d\n", ft_isdigit('0'));
-	printf("El resultado aplicando un 2do ejemplo es : %d\n",ft_isdigit('a'));
-	printf("El resultado aplicando la funcion es : %d\n", isdigit('0'));
-	printf("El resultado aplicando la f. 2 do ej es: %d\n", isdigit('b'));
-}*/

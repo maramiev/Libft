@@ -1,31 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maramiev <maramiev@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/28 11:00:37 by maramiev          #+#    #+#             */
-/*   Updated: 2024/01/31 13:39:39 by maramiev         ###   ########.fr       */
+/*   Created: 2024/01/29 13:45:12 by maramiev          #+#    #+#             */
+/*   Updated: 2024/01/29 15:02:27 by maramiev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isdigit(int c)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+{
+	size_t	i;
+	size_t	l;
+	char	*resultado;
 
-{
-	if (c >= 48 && c <= 57)
+	l = ft_strlen(s);
+	resultado = (char *) malloc(sizeof (char) *(l + 1));
+	if (!resultado)
+		return (NULL);
+	i = 0;
+	while (i < l)
 	{
-		return (1);
+		resultado[i] = (*f)(i, s[i]);
+		i++;
 	}
-	return (0);
+	resultado[i] = '\0';
+	return (resultado);
 }
-/*
-int	main(void)
-{
-	printf("El resultado aplicando mi funcion es : %d\n", ft_isdigit('0'));
-	printf("El resultado aplicando un 2do ejemplo es : %d\n",ft_isdigit('a'));
-	printf("El resultado aplicando la funcion es : %d\n", isdigit('0'));
-	printf("El resultado aplicando la f. 2 do ej es: %d\n", isdigit('b'));
-}*/

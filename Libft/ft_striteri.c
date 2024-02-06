@@ -1,31 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maramiev <maramiev@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/28 11:00:37 by maramiev          #+#    #+#             */
-/*   Updated: 2024/01/31 13:39:39 by maramiev         ###   ########.fr       */
+/*   Created: 2024/01/30 10:26:29 by maramiev          #+#    #+#             */
+/*   Updated: 2024/01/30 10:46:19 by maramiev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isdigit(int c)
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
+{
+	int	i;
 
-{
-	if (c >= 48 && c <= 57)
+	i = 0;
+	while (s[i] != '\0')
 	{
-		return (1);
+		(*f)(i, &s[i]);
+		i++;
 	}
-	return (0);
 }
-/*
-int	main(void)
-{
-	printf("El resultado aplicando mi funcion es : %d\n", ft_isdigit('0'));
-	printf("El resultado aplicando un 2do ejemplo es : %d\n",ft_isdigit('a'));
-	printf("El resultado aplicando la funcion es : %d\n", isdigit('0'));
-	printf("El resultado aplicando la f. 2 do ej es: %d\n", isdigit('b'));
-}*/

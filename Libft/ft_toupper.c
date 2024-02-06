@@ -6,9 +6,11 @@
 /*   By: maramiev <maramiev@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/20 12:57:15 by maramiev          #+#    #+#             */
-/*   Updated: 2024/01/02 10:00:53 by maramiev         ###   ########.fr       */
+/*   Updated: 2024/02/06 12:58:54 by maramiev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_toupper(int c)
 
